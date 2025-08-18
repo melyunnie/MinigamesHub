@@ -2,18 +2,17 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy1 : MonoBehaviour
 {
     [SerializeField] Transform player;
     [SerializeField] float enemyspeed;
     [SerializeField]Rigidbody2D rb;
-    public float EnemyHP;
-    public float EnemyDMG;
-    bool flip;
+    [SerializeField] public float EnemyHP, EnemymaxHP;
+    [SerializeField] float EnemyDMG;
     Vector2 movement;
     void Start()
     {
-        
+        EnemyHP = EnemymaxHP;
     }
 
     // Update is called once per frame
@@ -30,8 +29,18 @@ public class EnemyMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * enemyspeed * Time.fixedDeltaTime );
+    
 
     }
+    public void EnemyTakesDMG(float damageAmount)
+    {
+        EnemyHP -= damageAmount;
+        if (EnemyHP <= 0) 
+        {
+            Destroy(gameObject);
+        }
+    }
+   
     //enemy2
     //Vector2 direction = (player.position - transform.position).normalized;
     //movement = direction;

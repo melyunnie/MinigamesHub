@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Fight : MonoBehaviour
 {
-    [SerializeField] GameObject weapon;
-    Player player;
-    EnemyMovement enemy;
+    [SerializeField] GameObject Enemyweapon;
+    public Player player;
+    public Enemy1 enemy;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,11 +16,18 @@ public class Fight : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-       
-        
+        if (collision.gameObject.TryGetComponent<Enemy1>(out Enemy1 enemycomponent)) 
+        {
+          enemycomponent.EnemyTakesDMG(player.PlayerDMG);
+        }
+        if(collision.gameObject.TryGetComponent<Player>(out Player playercomponent)) 
+        {
+            playercomponent.TakesDMG(enemy.EnemyHP);
+        }
     }
+    
 
 }
 

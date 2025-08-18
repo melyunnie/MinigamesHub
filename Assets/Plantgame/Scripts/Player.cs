@@ -33,6 +33,14 @@ public class Player : MonoBehaviour
         movmentDiraction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
        
     }
+   public void TakesDMG(float EnemydamageAmount) 
+    {
+        PlayerHP -= EnemydamageAmount;
+        if (PlayerHP <= 0)
+        {
+            Debug.Log("you died");
+        }
+    }
 
    
    
