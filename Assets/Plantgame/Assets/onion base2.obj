@@ -4,7 +4,7 @@
 o 
 
 # material
-mtllib onion base.mtl
+mtllib onion base2.mtl
 usemtl palette
 
 # normals
