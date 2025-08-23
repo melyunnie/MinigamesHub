@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Vector2 movmentDiraction;
     public float PlayerHP;
    public float PlayerDMG;
+    public Rigidbody2D Playerrotation;
 
 
     void Start()
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+
     }
 
     private void FixedUpdate()
@@ -31,7 +33,7 @@ public class Player : MonoBehaviour
     void Movement()
     {
         movmentDiraction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-       
+        
     }
    public void TakesDMG(float EnemydamageAmount) 
     {
