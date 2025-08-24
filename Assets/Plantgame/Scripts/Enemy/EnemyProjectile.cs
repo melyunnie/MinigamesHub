@@ -8,25 +8,29 @@ public class EnemyProjectile : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform Enemy2;
     [SerializeField] float enemyspeed;
-    
+    public Objectpool bulletPool;
+    // schade zwischen spieler und enemy noch bei beiden skripten fehlend
     void Start()
     {
         StartCoroutine(SpawnBullets());
-        // alle x sekunden wird ein projectile in richtung spieler geschossen
-        //die kugeln treffen entweder den spieler oder die werden zerstört 
+
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        
     }
     void Projectile() 
     {
-        GameObject newBullet = Instantiate (bullet, Enemy2.position, Enemy2.rotation);
+        GameObject newBullet = bulletPool.GetBulletObject();
+        newBullet.transform.position = Enemy2.position;
+        newBullet.transform.rotation = Enemy2.rotation;
         Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
         Vector2 direction = (player.position - transform.position).normalized;
         rb.linearVelocity = (direction * enemyspeed);
+        StartCoroutine(DeactivateBullet(newBullet));
     }
  
 
@@ -35,9 +39,18 @@ public class EnemyProjectile : MonoBehaviour
     {
         while(true)
             {
+           
             Projectile();
-            yield return new WaitForSeconds(10f);
+           
+            yield return new WaitForSeconds(2f);
         }
+        
+    }
+    IEnumerator DeactivateBullet(GameObject bullet) 
+    {
+        yield return new WaitForSeconds(5f);
+        bulletPool.ReturnBulletObject(bullet);
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

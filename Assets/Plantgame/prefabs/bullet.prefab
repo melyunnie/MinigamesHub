@@ -106,6 +106,7 @@ MonoBehaviour:
   bullet: {fileID: 0}
   Enemy2: {fileID: 0}
   enemyspeed: 5
+  bulletPool: {fileID: 0}
 --- !u!50 &5704199697486817873
 Rigidbody2D:
   serializedVersion: 5
