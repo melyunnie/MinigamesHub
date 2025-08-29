@@ -5,11 +5,13 @@ using UnityEngine.EventSystems;
 public class Enemy1 : MonoBehaviour
 {
     [SerializeField] Transform player;
+    [SerializeField] GameObject enemy1;
     [SerializeField] float enemyspeed;
     [SerializeField]Rigidbody2D rb;
     [SerializeField] public float EnemyHP, EnemymaxHP;
     [SerializeField] float EnemyDMG;
     Vector2 movement;
+    public SpawnEnemy SpawnEnemy;
     void Start()
     {
         EnemyHP = EnemymaxHP;
@@ -37,13 +39,13 @@ public class Enemy1 : MonoBehaviour
         EnemyHP -= damageAmount;
         if (EnemyHP <= 0) 
         {
-            Destroy(gameObject);
+            SpawnEnemy.Enemy1Number--;
+            enemy1.SetActive(false);
+
+
         }
     }
    
-    //enemy2
-    //Vector2 direction = (player.position - transform.position).normalized;
-    //movement = direction;
-    //rb.MovePosition(direction * enemyspeed);   
+   
 }
 

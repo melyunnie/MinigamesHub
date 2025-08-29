@@ -9,6 +9,7 @@ public class EnemyProjectile : MonoBehaviour
     [SerializeField] Transform Enemy2;
     [SerializeField] float enemyspeed;
     public Objectpool bulletPool;
+    
     // schade zwischen spieler und enemy noch bei beiden skripten fehlend
     void Start()
     {
@@ -58,6 +59,7 @@ public class EnemyProjectile : MonoBehaviour
             {
 
             Destroy(gameObject);
+            //schaden zu player fehlt
         }
     }
 }
