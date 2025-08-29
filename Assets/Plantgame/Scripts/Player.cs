@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     float Speed = 10f;
     private Rigidbody2D rb;
     private Vector2 movmentDiraction;
@@ -19,7 +18,6 @@ public class Player : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Movement();
@@ -43,6 +41,8 @@ public class Player : MonoBehaviour
             Debug.Log("you died");
         }
     }
+    // tode nicht drin
+    //weapon mit maus bewegen nicht drin
 
    
    

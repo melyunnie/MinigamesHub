@@ -7,6 +7,8 @@ public class Objectpool : MonoBehaviour
     private Queue<GameObject> bulletpool = new Queue<GameObject>();
     public GameObject Enemy1prefab;
     private Queue<GameObject> enemy1pool = new Queue<GameObject>();
+    public GameObject Enemy2prefab;
+    private Queue<GameObject> enemy2pool = new Queue<GameObject>();
     public GameObject GetBulletObject() 
     { 
          if (bulletpool.Count > 0) 
@@ -38,5 +40,19 @@ public class Objectpool : MonoBehaviour
         en1.SetActive(false);
         enemy1pool.Enqueue(en1);
     }
-
+    public GameObject GetEnemy2Object()
+    {
+        if (enemy2pool.Count > 0)
+        {
+            GameObject en2 = enemy2pool.Dequeue();
+            en2.SetActive(true);
+            return en2;
+        }
+        return Instantiate(Enemy2prefab);
+    }
+    public void ReturnEnemy2Object(GameObject en2)
+    {
+        en2.SetActive(false);
+        enemy2pool.Enqueue(en2);
+    }
 }

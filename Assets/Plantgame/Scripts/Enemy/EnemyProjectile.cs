@@ -59,7 +59,9 @@ public class EnemyProjectile : MonoBehaviour
             {
 
             Destroy(gameObject);
-            //schaden zu player fehlt
+            //schaden zu player fehlt + player kann nicht zerstören
         }
     }
+   
+    
 }

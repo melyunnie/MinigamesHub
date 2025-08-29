@@ -576,8 +576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy1Number: 5
-  Enemy2Number: 10
+  Enemy2Number: 5
   enemy1pool: {fileID: 409781251}
+  enemy2pool: {fileID: 409781251}
   spawnAreaMin: {x: -10, y: -10}
   spawnAreaMax: {x: 10, y: 10}
 --- !u!4 &392724094
@@ -626,6 +627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletprefab: {fileID: 7625446054686149715, guid: eabcc882fe0cd9e41a685e9d1b82453e, type: 3}
   Enemy1prefab: {fileID: 501093550}
+  Enemy2prefab: {fileID: 546669299}
 --- !u!4 &409781252
 Transform:
   m_ObjectHideFlags: 0
@@ -634,8 +636,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409781250}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4713633, y: 0.4245931, z: 0.014238248}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.4713633, y: 0.42459297, z: 0.014238248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -646,6 +648,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7827169803857993313, guid: d5f52a77ec56c6349b6b320c9daa0812, type: 3}
   m_PrefabInstance: {fileID: 1146765452}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &501093551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1178019848951772649, guid: d5f52a77ec56c6349b6b320c9daa0812, type: 3}
+  m_PrefabInstance: {fileID: 1146765452}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501093550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53075ca255862a945b6b73e011cfdfb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &546259118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,7 +1566,7 @@ PrefabInstance:
     - target: {fileID: 7857491954180002841, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 501093551}
     - target: {fileID: 7857491954180002841, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
       propertyPath: player
       value: 
