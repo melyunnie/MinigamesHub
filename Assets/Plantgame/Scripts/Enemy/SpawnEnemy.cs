@@ -5,8 +5,8 @@ public class SpawnEnemy : MonoBehaviour
 {
     public float Enemy1Number;
     public float Enemy2Number;
-    float Enemy1spawn;
-    float Enemy2spawn;
+    public float Enemy1spawn;
+    public float Enemy2spawn;
     public Objectpool enemy1pool;
     public Objectpool enemy2pool;
     public Vector2 spawnAreaMin = new Vector2(-10f, -10f);

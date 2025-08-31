@@ -484,6 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160416540}
+  - component: {fileID: 160416541}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -509,6 +510,18 @@ Transform:
   - {fileID: 57230378}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160416541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160416539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd0ade6f14e03b49b4ae92018f7f42a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &275082699
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,8 +638,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b4da3cd8ce8d94283038cf4ebcdeb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy1Number: 5
-  Enemy2Number: 5
+  Enemy1Number: 2
+  Enemy2Number: 2
+  Enemy1spawn: 0
+  Enemy2spawn: 0
   enemy1pool: {fileID: 409781251}
   enemy2pool: {fileID: 409781251}
   spawnAreaMin: {x: -10, y: -10}
