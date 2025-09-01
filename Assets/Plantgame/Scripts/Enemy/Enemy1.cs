@@ -34,7 +34,7 @@ public class Enemy1 : MonoBehaviour
     
 
     }
-    public void EnemyTakesDMG(float damageAmount)
+    public void Enemy1TakesDMG(float damageAmount)
     {
         EnemyHP -= damageAmount;
         if (EnemyHP <= 0) 

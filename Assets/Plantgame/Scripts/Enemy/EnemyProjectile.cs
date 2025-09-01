@@ -7,9 +7,11 @@ public class EnemyProjectile : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform Enemy2;
+    [SerializeField] GameObject enemy2;
     [SerializeField] float enemyspeed;
     public Objectpool bulletPool;
-    
+    [SerializeField] public float EnemyHP, EnemymaxHP;
+    [SerializeField] float EnemyDMG;
     // schade zwischen spieler und enemy noch bei beiden skripten fehlend
     void Start()
     {
@@ -18,7 +20,7 @@ public class EnemyProjectile : MonoBehaviour
       
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
@@ -58,10 +60,22 @@ public class EnemyProjectile : MonoBehaviour
         if (!collision.gameObject.CompareTag("Enemy"))
             {
 
-            Destroy(gameObject);
-            //schaden zu player fehlt + player kann nicht zerstören
+            Destroy(gameObject);   
+        }
+       
+
+    }
+    public void Enemy2TakesDMG(float damageAmount)
+    {
+        EnemyHP -= damageAmount;
+        if (EnemyHP <= 0)
+        {
+            SpawnEnemy.Enemy2Number--;
+            enemy2.SetActive(false);
+
+
         }
     }
-   
-    
+
+
 }

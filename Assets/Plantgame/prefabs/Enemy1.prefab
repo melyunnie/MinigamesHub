@@ -97,14 +97,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7653052366652532544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4699c310af963498037f09a7aecdce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Enemyweapon: {fileID: 0}
   player: {fileID: 0}
-  enemy: {fileID: 1178019848951772649}
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
 --- !u!61 &8525592110490533495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4918855030809352594
 Transform:
   m_ObjectHideFlags: 0

@@ -138,7 +138,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 8459847157248834873}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDamping: 0
@@ -147,13 +147,13 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &9018927633570359883
 MonoBehaviour:
@@ -170,8 +170,12 @@ MonoBehaviour:
   player: {fileID: 0}
   bullet: {fileID: 7625446054686149715, guid: eabcc882fe0cd9e41a685e9d1b82453e, type: 3}
   Enemy2: {fileID: 8760180267846411937}
+  enemy2: {fileID: 8459847157248834873}
   enemyspeed: 5
   bulletPool: {fileID: 0}
+  EnemyHP: 100
+  EnemymaxHP: 0
+  EnemyDMG: 50
 --- !u!1001 &7276317116726670783
 PrefabInstance:
   m_ObjectHideFlags: 0
