@@ -1,37 +1,43 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
-    SpawnEnemy SpawnEnemy;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+   public SpawnEnemy SpawnEnemy;
+    public float EnemyNumber;
+
     void Start()
     {
-        
+        SpawnEnemy.Enemy1spawn = SpawnEnemy.Enemy1Number;
+        SpawnEnemy.Enemy2spawn = SpawnEnemy.Enemy2Number;
+
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        Newlevel();
     }
-    //enemynumber increse
+    
     // level detection
     void Newlevel() 
     {
-        float EnemyNumber = SpawnEnemy.Enemy1Number;
-            //+ SpawnEnemy.Enemy2Number;
-        SpawnEnemy.Enemy1spawn = SpawnEnemy.Enemy1Number;
-        SpawnEnemy.Enemy2spawn = SpawnEnemy.Enemy2Number;
-        if (EnemyNumber == 0) 
+        
+         EnemyNumber = SpawnEnemy.Enemy1Number;
+        //+ SpawnEnemy.Enemy2Number;
+
+        if (EnemyNumber == 0)
         {
+            Debug.Log("test 2");
             //next level bzw shop
-          SpawnEnemy.Enemy1Number = SpawnEnemy.Enemy1spawn  * 2;
-          //SpawnEnemy.Enemy2Number = SpawnEnemy.Enemy2spawn * 2;
+            SpawnEnemy.Enemy1Number = SpawnEnemy.Enemy1spawn * 2;
+            //SpawnEnemy.Enemy2Number = SpawnEnemy.Enemy2spawn * 2;
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
-
-        // überschreibt die numbers nicht
-
-        //if (Enemy1Number && Enemy2Number == 0) { next level }
+       
     }
+    
 
 }

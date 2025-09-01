@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public float Enemy1Number;
-    public float Enemy2Number;
+    public static float Enemy1Number =2 ;
+    public static float Enemy2Number= 2;
     public float Enemy1spawn;
     public float Enemy2spawn;
     public Objectpool enemy1pool;
     public Objectpool enemy2pool;
     public Vector2 spawnAreaMin = new Vector2(-10f, -10f);
     public Vector2 spawnAreaMax = new Vector2(10f, 10f);
+   
     
     void Start()
     {
@@ -42,6 +43,7 @@ public class SpawnEnemy : MonoBehaviour
                 SpawnEn1();
             yield return new WaitForSeconds(2f);
         }
+       
 
     }
 
@@ -80,6 +82,6 @@ public class SpawnEnemy : MonoBehaviour
     // sollen nicht despawnen
     //lengere spawn dauer?
 
-    //if (Enemy1Number && Enemy2Number == 0) { next level }
+   
 }
 
