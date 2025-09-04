@@ -8,9 +8,10 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movmentDiraction;
     public float PlayerHP;
-   public float PlayerDMG;
+    public float PlayerDMG;
     public Rigidbody2D Playerrotation;
-
+    public float Mausspeed = 5f;
+   public GameObject weapon;
 
     void Start()
     {
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
-
+        Weaponmovement();
     }
 
     private void FixedUpdate()
@@ -41,8 +42,15 @@ public class Player : MonoBehaviour
             Debug.Log("you died");
         }
     }
+    void Weaponmovement() 
+    {
+        Vector2 direction = Input.mousePosition - weapon.transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        weapon.transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
     // tode nicht drin
-    //weapon mit maus bewegen nicht drin
+    
 
    
    

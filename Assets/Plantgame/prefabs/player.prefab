@@ -104,6 +104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHP: 0
   PlayerDMG: 0
+  Playerrotation: {fileID: 0}
+  Mausspeed: 5
+  weapon: {fileID: 0}
 --- !u!50 &395703007028690017
 Rigidbody2D:
   serializedVersion: 5
@@ -159,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 6494530836682372126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.53, y: 0, z: 0}
+  m_LocalPosition: {x: -0.508, y: 0.487, z: 0}
   m_LocalScale: {x: 1.34, y: 0.28, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -278,4 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4699c310af963498037f09a7aecdce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 6494530836682372126}
+  Enemyweapon: {fileID: 0}
+  player: {fileID: 0}
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}

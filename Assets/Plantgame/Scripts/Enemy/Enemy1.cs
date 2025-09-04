@@ -41,8 +41,6 @@ public class Enemy1 : MonoBehaviour
         {
             SpawnEnemy.Enemy1Number--;
             enemy1.SetActive(false);
-
-
         }
     }
    

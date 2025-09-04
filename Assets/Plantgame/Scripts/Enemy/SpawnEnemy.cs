@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public static float Enemy1Number =2 ;
-    public static float Enemy2Number= 2;
+    public float Enemy1Number = 2 ;
+    public float Enemy2Number = 2;
     public float Enemy1spawn;
     public float Enemy2spawn;
     public Objectpool enemy1pool;
@@ -35,18 +35,15 @@ public class SpawnEnemy : MonoBehaviour
         newEnemy1.SetActive(true);
         StartCoroutine(DeactivateEnemy1(newEnemy1));     
    
-     }      
+     }
     IEnumerator SpawnEnemy1()
     {
         while (Enemy1Number > 1)
         {
-                SpawnEn1();
+            SpawnEn1();
             yield return new WaitForSeconds(2f);
         }
-       
-
     }
-
     IEnumerator DeactivateEnemy1(GameObject Enemy1)
     {
         yield return new WaitForSeconds(5f);
@@ -60,8 +57,9 @@ public class SpawnEnemy : MonoBehaviour
         newEnemy2.transform.position = new Vector3(x, y, 0f);
         Rigidbody2D rb = newEnemy2.GetComponent<Rigidbody2D>();
         newEnemy2.SetActive(true);
-        StartCoroutine(DeactivateEnemy2(newEnemy2));
 
+        StartCoroutine(DeactivateEnemy2(newEnemy2));
+        
     }
     IEnumerator SpawnEnemy2()
     {
