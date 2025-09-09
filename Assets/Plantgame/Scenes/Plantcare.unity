@@ -1314,6 +1314,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6494530836682372126, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
   m_PrefabInstance: {fileID: 3066086241045234563}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107950373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107950372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02179c7e639ccb04e93bb1c81fa1b1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1056454000881977914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1451,6 +1463,74 @@ PrefabInstance:
       propertyPath: Playerrotation
       value: 
       objectReference: {fileID: 45153460}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: Playerstats.Hp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: Playerstats.Atk
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: Playerstats.Range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: Playerstats.Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[0].Statname
+      value: Def
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[1].Statname
+      value: HP
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[2].Statname
+      value: Rage
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[3].Statname
+      value: Speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[4].Statname
+      value: ATK
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[5].Statname
+      value: ATK
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[0].Statnumber
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[1].Statnumber
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[2].Statnumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[3].Statnumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[4].Statnumber
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 852913378771095599, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      propertyPath: PlayerList.Array.data[5].Statnumber
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1094392138710038866, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -1568,6 +1648,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2542784375103468092, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 879469608}
+    - targetCorrespondingSourceObject: {fileID: 6494530836682372126, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2107950373}
   m_SourcePrefab: {fileID: 100100000, guid: 70c3a348d100a7a4bba466ebdd92fde6, type: 3}
 --- !u!1001 &7289237606745592264
 PrefabInstance:

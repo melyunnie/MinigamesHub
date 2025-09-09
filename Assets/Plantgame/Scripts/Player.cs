@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class Player : MonoBehaviour
     public float Mausspeed = 5f;
    public GameObject weapon;
 
+    public Stats Playerstats;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,8 +39,8 @@ public class Player : MonoBehaviour
     }
    public void TakesDMG(float EnemydamageAmount) 
     {
-        PlayerHP -= EnemydamageAmount;
-        if (PlayerHP <= 0)
+        Playerstats.Hp -= EnemydamageAmount;
+        if (Playerstats.Hp <= 0)
         {
             Debug.Log("you died");
         }
@@ -50,6 +53,7 @@ public class Player : MonoBehaviour
     }
 
     // tode nicht drin
+    //DMG Und hp klapt nicht
     
 
    
