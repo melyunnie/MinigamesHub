@@ -19,6 +19,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (DefaultStats.Instance != null)
+        {
+            Playerstats.CopyFrom(DefaultStats.Instance.savedStats);
+        }
 
     }
 

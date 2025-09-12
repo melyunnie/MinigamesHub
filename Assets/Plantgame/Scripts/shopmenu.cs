@@ -3,18 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class shopmenu : MonoBehaviour
 {
-    public Stats Playerstats;
+    public Stats Playerstats = new Stats();
+
     bool swordclick = false;
     bool bowclick = false;
     bool hammerclick = false;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
+        if (DefaultStats.Instance != null)
+        {
+            Playerstats.CopyFrom(DefaultStats.Instance.savedStats);
+        }
+    } 
     void Update()
     {
 
@@ -22,9 +22,18 @@ public class shopmenu : MonoBehaviour
     public void OnSwordClicked()
     {
         Debug.Log("sword");
-        // alte stats werden übernommen/ resettet bei jeden weaponclick
-        bowclick = false;
-        hammerclick = false;
+        if (hammerclick == true) 
+        {
+            hammerclick = false; 
+            Playerstats.Atk -= 20f;
+            Playerstats.Speed += 20f;
+        }
+        if (bowclick == true)
+        {
+            bowclick = false;
+            Playerstats.Hp += 20f;
+            Playerstats.Range -= 20f;
+        }
         if (swordclick == false)
         {
             Playerstats.Atk -= 20f;
@@ -36,8 +45,18 @@ public class shopmenu : MonoBehaviour
     public void OnBowClicked()
     {
         Debug.Log("bow");
-        swordclick = false;
-        hammerclick = false;
+        if (swordclick == true) 
+        { 
+            swordclick = false;
+            Playerstats.Atk += 20f;
+            Playerstats.Speed -= 20f;
+        }
+        if(hammerclick== true)
+        {  
+            hammerclick = false;
+            Playerstats.Atk -= 20f;
+            Playerstats.Speed += 20f;
+        }
         if (bowclick == false)
         {
             Playerstats.Hp -= 20f;
@@ -48,11 +67,21 @@ public class shopmenu : MonoBehaviour
     public void OnHammerClicked()
     {
         Debug.Log("hammer");
-        swordclick = false;
-        bowclick = false;
-
+        if (swordclick == true)
+        {
+            swordclick = false;
+            Playerstats.Atk += 20f;
+            Playerstats.Speed -= 20f;
+        }
+        if (bowclick == true)
+        {
+            bowclick = false;
+            Playerstats.Hp += 20f;
+            Playerstats.Range -= 20f;
+        }
         if (hammerclick == false)
         {
+           
             Playerstats.Atk += 20f;
             Playerstats.Speed -= 20f;
             hammerclick = true;
@@ -60,16 +89,16 @@ public class shopmenu : MonoBehaviour
     }
     public void OnNextlevelClick() 
     {
-        // klick next level-> stats werden übernommen
+        if (DefaultStats.Instance != null)
+        {
+            DefaultStats.Instance.savedStats.CopyFrom(Playerstats);
+        }
         SceneManager.LoadScene("Plantcare");
-        //levelcount
-
     }
-    
-    // angeklicktes item-> stats werden aktualiert
 
-    //stats müssen noch auf den spieler übertragen werden und vorherige stats sollen übernommen werden
-   
-    
+    // angeklickte Armor-> stats werden aktualiert
+    //armor mit random  value
+    //visuelle anzeige
+
 
 }

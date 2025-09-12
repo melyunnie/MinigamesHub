@@ -3,17 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
-   public SpawnEnemy SpawnEnemy;
+    public SpawnEnemy SpawnEnemy;
     public float EnemyNumber;
-
+    int levelcount = 0;
     void Start()
     {
         SpawnEnemy.Enemy1spawn = SpawnEnemy.Enemy1Number;
         SpawnEnemy.Enemy2spawn = SpawnEnemy.Enemy2Number;
-
+        
     }
-
-    
     void Update()
     {
         Newlevel();
@@ -32,7 +30,7 @@ public class Level : MonoBehaviour
             //next level bzw shop
             SpawnEnemy.Enemy1Number = SpawnEnemy.Enemy1spawn * 2;
           //  SpawnEnemy.Enemy2Number = SpawnEnemy.Enemy2spawn * 2;
-
+            levelcount++;
             SceneManager.LoadScene("Plantshop");
         }
        

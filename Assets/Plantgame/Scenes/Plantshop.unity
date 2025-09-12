@@ -119,6 +119,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &93976153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93976155}
+  - component: {fileID: 93976154}
+  m_Layer: 0
+  m_Name: shopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &93976154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93976153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c6e15783370964db90d218096e2e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Playerstats:
+    Speed: 0
+    Hp: 0
+    Atk: 0
+    Def: 0
+    Range: 0
+--- !u!4 &93976155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93976153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 238.79272, y: 413.10147, z: -1.5048574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &102268461
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +475,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141017640}
+      - m_Target: {fileID: 93976154}
         m_TargetAssemblyTypeName: shopmenu, Assembly-CSharp
         m_MethodName: OnNextlevelClick
         m_Mode: 1
@@ -799,7 +849,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141017640}
+      - m_Target: {fileID: 93976154}
         m_TargetAssemblyTypeName: shopmenu, Assembly-CSharp
         m_MethodName: OnSwordClicked
         m_Mode: 1
@@ -932,7 +982,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141017640}
+      - m_Target: {fileID: 93976154}
         m_TargetAssemblyTypeName: shopmenu, Assembly-CSharp
         m_MethodName: OnBowClicked
         m_Mode: 1
@@ -991,9 +1041,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1141017639}
-  - component: {fileID: 1141017640}
+  - component: {fileID: 1141017641}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: stats Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1014,7 +1064,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1141017640
+--- !u!114 &1141017641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1023,10 +1073,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141017638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3c6e15783370964db90d218096e2e92, type: 3}
+  m_Script: {fileID: 11500000, guid: ee16a2ec01527424d8103e36c8e3d5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Playerstats:
+  savedStats:
     Speed: 0
     Hp: 0
     Atk: 0
@@ -1784,7 +1834,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141017640}
+      - m_Target: {fileID: 93976154}
         m_TargetAssemblyTypeName: shopmenu, Assembly-CSharp
         m_MethodName: OnHammerClicked
         m_Mode: 1
@@ -2089,3 +2139,4 @@ SceneRoots:
   - {fileID: 856153230}
   - {fileID: 1155923349}
   - {fileID: 1141017639}
+  - {fileID: 93976155}
