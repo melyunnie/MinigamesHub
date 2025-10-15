@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      krazer v.2_0: 7452937119912617493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
