@@ -1,13 +1,19 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class shopmenu : MonoBehaviour
 {
     public Stats Playerstats = new Stats();
-    public List<Stats> statsListe = new List<Stats>();
 
+    [SerializeField] TMP_Text atktext;
+    [SerializeField] TMP_Text deftext;
+    [SerializeField] TMP_Text speedtext;
+    [SerializeField] TMP_Text rangetext;
+    [SerializeField] TMP_Text hptext;
 
     public static int pickaxt = 0;
     public static int kratzer = 0;
@@ -27,6 +33,11 @@ public class shopmenu : MonoBehaviour
     {
         //welche waffe ausgewählt war soll 1. übertragen werden
         //2. waffe soll als ausgewählt bleiben als defould
+    }
+    void UpdateStats() 
+    {
+        // boxen anzeigen/aktualieieren
+
     }
     public void OnPickaxtClicked()
     {
@@ -99,10 +110,10 @@ public class shopmenu : MonoBehaviour
 
     public void OnItem1Clicked ()
     {
-        Debug.Log("bressed");
+        Debug.Log("bressed 1");
         int randomIndex = Random.Range(0, 5);
         
-       Debug.Log("");
+        
 
         //random range
         //Anzeige der werte
@@ -111,24 +122,28 @@ public class shopmenu : MonoBehaviour
     }
     public void OnItem2Clicked()
     {
+        Debug.Log("bressed 2");
         //random range
         //Anzeige der werte
         // wenn was anderers selectet reset
     }
     public void OnItem3Clicked()
     {
+        Debug.Log("bressed 3");
         //random range
         //Anzeige der werte
         // wenn was anderers selectet reset
     }
     public void OnItem4Clicked()
     {
+        Debug.Log("bressed 4");
         //random range
         //Anzeige der werte
         // wenn was anderers selectet reset
     }
     public void OnItem5Clicked()
     {
+        Debug.Log("bressed 5");
         //random range
         //Anzeige der werte
         // wenn was anderers selectet reset
