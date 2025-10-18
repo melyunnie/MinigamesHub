@@ -24,6 +24,7 @@ public class shopmenu : MonoBehaviour
         {
             Playerstats.CopyFrom(DefaultStats.Instance.savedStats);
         }
+        UpdateStats();
     }
     void Update()
     {
@@ -31,12 +32,19 @@ public class shopmenu : MonoBehaviour
     }
     void Weaponsave()
     {
-        //welche waffe ausgewählt war soll 1. übertragen werden
-        //2. waffe soll als ausgewählt bleiben als defould
+        //welche waffe ausgewählt war soll 1. übertragen werden im spiel
+        
+
     }
     void UpdateStats() 
     {
+
         // boxen anzeigen/aktualieieren
+        atktext.text = Playerstats.Atk.ToString();
+        deftext.text = Playerstats.Def.ToString();
+        speedtext.text = Playerstats.Speed.ToString();
+        hptext.text = Playerstats.Hp.ToString();
+        rangetext.text = Playerstats.Range.ToString();
 
     }
     public void OnPickaxtClicked()
@@ -61,6 +69,7 @@ public class shopmenu : MonoBehaviour
             pickaxt = 1;
             //soll visuell anzeigen, welche weapon ausgew�hlt ist 1/3
         }
+        UpdateStats();
     }
     public void OnkratzerClicked()
     {
@@ -83,6 +92,7 @@ public class shopmenu : MonoBehaviour
             Playerstats.Range += 20f;
             kratzer = 1;
         }
+        UpdateStats();
     }
     public void OnFlamethrowerClicked()
     {
@@ -106,6 +116,7 @@ public class shopmenu : MonoBehaviour
             Playerstats.Speed -= 20f;
             flamethrowerclick = 1;
         }
+        UpdateStats();
     }
 
     public void OnItem1Clicked ()
